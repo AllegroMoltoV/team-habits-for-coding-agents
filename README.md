@@ -60,7 +60,7 @@ These skills are adapted from the author's open rule set for Claude Code, [my-cl
 
 ## License
 
-MIT License. See [LICENSE](LICENSE).
+MIT License. See [LICENSE](https://github.com/AllegroMoltoV/team-habits-for-coding-agents/blob/main/LICENSE).
 
 ## Changelog
 
