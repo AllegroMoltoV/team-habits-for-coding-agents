@@ -66,4 +66,5 @@ MIT License. See [LICENSE](https://github.com/AllegroMoltoV/team-habits-for-codi
 
 | Version | Date | Changes |
 |---|---|---|
+| 1.1 | 2026-10-31 | `requirements-vs-means`: requirements derived from a hedged statement stay Open. `requirements-vs-means` and `record-placement`: name people as the project glossary does, not from git config. |
 | 1.0 | 2026-10-31 | First release: `start-here` and six skills. |

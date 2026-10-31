@@ -47,6 +47,7 @@ So never put a decision that must keep applying only in a closing reason or a no
 - Task notes and project memory describe the current state. Rewrite outdated entries; update project memory by its key so the old entry does not survive beside the new one.
 - Before overwriting history worth keeping (approaches that failed, how a decision was reached), move it to `docs/reports/`.
 - Write how each fact was verified. Mark anything unverified as unverified.
+- When a record says who decided or who set a constraint, use the name from the project glossary (`docs/glossary.md`). If there is no entry, ask, or load `glossary-and-actors`. Do not take a name from git config or the environment.
 - When closing a task, write what was done and how it was verified, or that it was not verified.
 
 ## Without Beads

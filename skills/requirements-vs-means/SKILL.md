@@ -20,8 +20,9 @@ In meetings, a suggestion often turns into "what we decided" without anyone deci
    | Open | Not decided yet | Who decides, by when, and what information is missing |
 
 4. Anything you proposed starts as Provisional. Only the person who approves work can move it to Confirmed. Never record your own proposal as Confirmed.
-5. When the user hedges ("maybe", "I think", "it might be"), treat the statement as Open, not as an instruction. Check the facts or offer options, and give the decision back to them.
-6. Store the decisions where the next session will read them. Load `record-placement` if you are not sure where that is.
+5. Confirmed covers only what the approver stated without hedging. When they hedge ("maybe", "I think", "it might", "could"), the hedged part is Open, and so is every requirement you derive from it. For example, "I think it might need streaming because the file could get big" confirms neither streaming nor "must handle large files". Check the facts or offer options, and give the decision back to them.
+6. Name people as the project glossary (`docs/glossary.md`) names them. If there is no glossary entry, ask, or load `glossary-and-actors`. Do not take a name from git config or the environment.
+7. Store the decisions where the next session will read them. Load `record-placement` if you are not sure where that is.
 
 ## Revisiting decisions
 
