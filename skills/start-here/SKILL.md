@@ -25,12 +25,12 @@ Before acting in the situations below, load the matching skill with the agensi M
 
 | Situation | Call |
 |---|---|
-| A technical limit, tool or approach is about to become part of a design or requirement | `get_skill {"slug": "<slug>", "path": "<path of requirements-vs-means>"}` |
-| A document that describes the current state (spec, design, plan, README, comment, config) needs to change | `get_skill {"slug": "<slug>", "path": "<path of current-state-docs>"}` |
-| A new term, role or person appears, or two names seem to mean the same thing | `get_skill {"slug": "<slug>", "path": "<path of glossary-and-actors>"}` |
-| Deciding what to work on next, or setting priorities and dependencies | `get_skill {"slug": "<slug>", "path": "<path of ordering-by-dependency>"}` |
-| A plan for multi-step work has been written and is about to be shown to the user or executed | `get_skill {"slug": "<slug>", "path": "<path of plan-refutation>"}` |
-| A decision, finding or temporary constraint needs to be recorded | `get_skill {"slug": "<slug>", "path": "<path of record-placement>"}` |
+| The request settles what a feature must do, the user hedges about what is needed ("maybe", "I think", "might"), or the work will write limits, tools or approaches into a spec, design, plan or decision record | `get_skill {"slug": "<slug>", "path": "<path of requirements-vs-means>"}` |
+| The work changes behavior that a spec, design, plan, README or comment describes, or updates any of those documents | `get_skill {"slug": "<slug>", "path": "<path of current-state-docs>"}` |
+| The work includes writing an issue, commit message, report, changelog or a message for people, or the user uses a new name for something or mentions a new person or role | `get_skill {"slug": "<slug>", "path": "<path of glossary-and-actors>"}` |
+| The user asks what to do next, points to a backlog or list of tasks, or the work has several tasks to order | `get_skill {"slug": "<slug>", "path": "<path of ordering-by-dependency>"}` |
+| The work includes writing a plan for multi-step work, or carrying out a plan (even an approved one) | `get_skill {"slug": "<slug>", "path": "<path of plan-refutation>"}` |
+| The user makes a decision or gives an instruction meant to last ("from now on", "don't ... until", "remember"), the work may span several sessions, or it produces decisions or check results to write down | `get_skill {"slug": "<slug>", "path": "<path of record-placement>"}` |
 <!-- team-habits:end -->
 ```
 

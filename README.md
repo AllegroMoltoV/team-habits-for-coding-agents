@@ -4,6 +4,21 @@ AI coding agents fail in the same ways human teams always have. A suggestion qui
 
 Software teams found fixes for these long ago: decision records, current-state documents, a shared glossary, dependency-based ordering, independent review. This pack teaches your agent those habits, one skill per failure, and tells it where to write things down so the next session can pick up where this one stopped.
 
+## Who it is for
+
+Developers and small teams who work with Claude Code, Codex or a similar agent in the same repository over many sessions. You decide and approve; the agent implements and keeps records in the repository.
+
+The skills pay off when a later session, or another person, reads what an earlier session left behind. For one-off scripts or tasks that finish in a single session, you will not get much from this pack.
+
+## When each skill helps
+
+- `requirements-vs-means`: you work out the spec of a feature with the agent over several sessions, and you do not want a passing "maybe" or a limit the agent ran into to turn into a requirement.
+- `current-state-docs`: you keep specs, design docs, plans and a README in the repository and have the agent update them as the code changes.
+- `glossary-and-actors`: the agent writes issues, commit messages, reports or messages for people, and your product has users of its own, so "the user" is ambiguous.
+- `ordering-by-dependency`: you have a backlog and ask the agent what to do next.
+- `plan-refutation`: you plan a migration or a large refactor and approve the plan before the agent carries it out.
+- `record-placement`: the work spans sessions, and decisions or instructions such as "don't push yet" must survive a context compaction or a new session.
+
 ## Skills
 
 | Skill | Failure it prevents | What it leaves in your repo |
@@ -66,5 +81,6 @@ MIT License. See [LICENSE](https://github.com/AllegroMoltoV/team-habits-for-codi
 
 | Version | Date | Changes |
 |---|---|---|
+| 1.2 | 2026-11-02 | `start-here`: the table now describes each situation by what the request and the repository show at the start of the work. Agents load skills while they orient themselves, before the first edit, so situations that only arise mid-task were often missed. README: added who the pack is for and when each skill helps. |
 | 1.1 | 2026-10-31 | `requirements-vs-means`: requirements derived from a hedged statement stay Open. `requirements-vs-means` and `record-placement`: name people as the project glossary does, not from git config. |
 | 1.0 | 2026-10-31 | First release: `start-here` and six skills. |
