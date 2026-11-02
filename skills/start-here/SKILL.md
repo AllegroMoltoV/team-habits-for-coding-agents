@@ -31,6 +31,7 @@ Before acting in the situations below, load the matching skill with the agensi M
 | The user asks what to do next, points to a backlog or list of tasks, or the work has several tasks to order | `get_skill {"slug": "<slug>", "path": "<path of ordering-by-dependency>"}` |
 | The work includes writing a plan for multi-step work, or carrying out a plan (even an approved one) | `get_skill {"slug": "<slug>", "path": "<path of plan-refutation>"}` |
 | The user makes a decision or gives an instruction meant to last ("from now on", "don't ... until", "remember"), the work may span several sessions, or it produces decisions or check results to write down | `get_skill {"slug": "<slug>", "path": "<path of record-placement>"}` |
+| The work sets up or changes something meant to run repeatedly: CI, a hook, a scheduled job, linter or formatter config, or agent rules | `get_skill {"slug": "<slug>", "path": "<path of verify-in-operation>"}` |
 <!-- team-habits:end -->
 ```
 

@@ -18,6 +18,7 @@ The skills pay off when a later session, or another person, reads what an earlie
 - `ordering-by-dependency`: you have a backlog and ask the agent what to do next.
 - `plan-refutation`: you plan a migration or a large refactor and approve the plan before the agent carries it out.
 - `record-placement`: the work spans sessions, and decisions or instructions such as "don't push yet" must survive a context compaction or a new session.
+- `verify-in-operation`: you have the agent set up CI, a hook, a scheduled job, linter config or agent rules that must take effect in several places, such as several packages, other people's clones, or both Claude Code and Codex.
 
 ## Skills
 
@@ -30,6 +31,7 @@ The skills pay off when a later session, or another person, reads what an earlie
 | `ordering-by-dependency` | Work starts on the easiest or lowest-numbered task | A dependency-ordered task list with impact-based priorities |
 | `plan-refutation` | The agent approves its own plan | One recorded refutation pass by a fresh reviewer |
 | `record-placement` | Decisions are written where the next session never looks | Each record in the place that will be read when it is needed |
+| `verify-in-operation` | A mechanism is called done after it worked once, in one place | A per-target table of what was checked, how, and what was not checked |
 
 Each skill is a single `SKILL.md` under `skills/`. There are no scripts and no hooks; the skills only ask the agent to read and write Markdown files in your repository.
 
@@ -49,12 +51,14 @@ Copy the skills you want into your project. `start-here` is not needed in this c
 # Claude Code
 mkdir -p .claude/skills
 cp -r skills/requirements-vs-means skills/current-state-docs skills/glossary-and-actors \
-      skills/ordering-by-dependency skills/plan-refutation skills/record-placement .claude/skills/
+      skills/ordering-by-dependency skills/plan-refutation skills/record-placement \
+      skills/verify-in-operation .claude/skills/
 
 # Codex and other agents that read .agents/skills
 mkdir -p .agents/skills
 cp -r skills/requirements-vs-means skills/current-state-docs skills/glossary-and-actors \
-      skills/ordering-by-dependency skills/plan-refutation skills/record-placement .agents/skills/
+      skills/ordering-by-dependency skills/plan-refutation skills/record-placement \
+      skills/verify-in-operation .agents/skills/
 ```
 
 The agent picks a skill from its description when the situation matches. You can also name it: "Use the plan-refutation skill on docs/plan.md."
@@ -81,6 +85,7 @@ MIT License. See [LICENSE](https://github.com/AllegroMoltoV/team-habits-for-codi
 
 | Version | Date | Changes |
 |---|---|---|
+| 1.3 | 2026-11-02 | New skill `verify-in-operation`: before calling a repeatedly running mechanism done, list every place it must take effect, check each one there (for agent rules, start each agent and ask it), try a case off the happy path, and report what was not checked. `start-here`: added its row. |
 | 1.2.1 | 2026-11-02 | `start-here`: copy the table word for word in English. An agent told to work in another language translated and shortened it, and the reworded table had not been tested. |
 | 1.2 | 2026-11-02 | `start-here`: the table now describes each situation by what the request and the repository show at the start of the work. Agents load skills while they orient themselves, before the first edit, so situations that only arise mid-task were often missed. README: added who the pack is for and when each skill helps. |
 | 1.1 | 2026-10-31 | `requirements-vs-means`: requirements derived from a hedged statement stay Open. `requirements-vs-means` and `record-placement`: name people as the project glossary does, not from git config. |
