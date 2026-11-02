@@ -81,6 +81,7 @@ MIT License. See [LICENSE](https://github.com/AllegroMoltoV/team-habits-for-codi
 
 | Version | Date | Changes |
 |---|---|---|
+| 1.2.1 | 2026-11-02 | `start-here`: copy the table word for word in English. An agent told to work in another language translated and shortened it, and the reworded table had not been tested. |
 | 1.2 | 2026-11-02 | `start-here`: the table now describes each situation by what the request and the repository show at the start of the work. Agents load skills while they orient themselves, before the first edit, so situations that only arise mid-task were often missed. README: added who the pack is for and when each skill helps. |
 | 1.1 | 2026-10-31 | `requirements-vs-means`: requirements derived from a hedged statement stay Open. `requirements-vs-means` and `record-placement`: name people as the project glossary does, not from git config. |
 | 1.0 | 2026-10-31 | First release: `start-here` and six skills. |
